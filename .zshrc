@@ -128,7 +128,11 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
 # }}} End configuration added by Zim install
 
+# Created by newuser for 5.9
+
+
 # >>> conda initialize >>>
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
@@ -142,15 +146,10 @@ else
 fi
 unset __conda_setup
 
-
-# export PATH="/opt/miniconda3/bin:$PATH"
-export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
 # <<< conda initialize <<<
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
+export NVM_DIR="/usr/share/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 source fzf.zsh

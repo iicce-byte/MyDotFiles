@@ -1,3 +1,0 @@
-sudo mkdir -p /mnt/windows_d
-sudo mount -t ntfs-3g /dev/nvme0n1p4 /mnt/windows_d
-sudo umount /mnt/windows_d

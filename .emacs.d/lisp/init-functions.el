@@ -1,0 +1,10 @@
+(defun open-my-config-package()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-packages.el")
+)
+(defun insert-manual-tab ()
+  (interactive)
+  (insert "    "))
+(global-set-key (kbd "S-<tab>") 'insert-manual-tab)
+
+(provide 'init-functions)

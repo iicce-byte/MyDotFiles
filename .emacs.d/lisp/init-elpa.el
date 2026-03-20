@@ -1,11 +1,11 @@
 ; (setq package-archives
-;       '(("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-;         ("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-; 	("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
-;         ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+;      '(("melpa" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;        ("gnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+;        ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+;        ("org" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("gnu" . "https://elpa.gnu.org/packages/")))
-;; 关闭包签名检查（国内环境常用）
+; 关闭包签名检查（国内环境常用）
 (setq package-check-signature nil)
 
 (require 'package)

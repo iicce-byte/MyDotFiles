@@ -27,9 +27,24 @@
 (setq-default css-indent-offset 4) ;; CSS
 (setq-default go-indent-level 4)   ;; Go
 
-(add-to-list 'default-frame-alist '(font . "JetbrainsMono Nerd Font"))
-(set-face-attribute 'fixed-pitch nil :font "JetbrainsMono Nerd Font")
-(set-face-attribute 'variable-pitch nil :font "JetbrainsMono Nerd Font")
+(electric-pair-mode 1)
+
+(setq electric-pair-inhibit-predicate
+      (lambda (c)
+        (eq c ?<)))
+
+(defun my-enable-angle-brackets ()
+  (setq-local electric-pair-inhibit-predicate
+              (lambda (c) nil)))
+
+(add-hook 'html-mode-hook       #'my-enable-angle-brackets)
+(add-hook 'nxml-mode-hook       #'my-enable-angle-brackets)
+(add-hook 'xml-mode-hook        #'my-enable-angle-brackets)
+(add-hook 'web-mode-hook        #'my-enable-angle-brackets)
+; JetbrainsMono Nerd Font
+(add-to-list 'default-frame-alist '(font . "DejaVuSansM Nerd Font Mono"))
+(set-face-attribute 'fixed-pitch nil :font "DejaVuSansM Nerd Font Mono")
+(set-face-attribute 'variable-pitch nil :font "DejaVuSansM Nerd Font Mono")
 
 ; (add-hook 'prog-mode-hook 'whitespace-mode)
 (set-language-environment "UTF-8")
